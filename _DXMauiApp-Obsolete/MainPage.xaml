@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="DXMauiApp.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:DXMauiApp">
+
+
+    <Grid>
+        <!--  Test Case 1  -->
+        <local:Class1
+            BP1="Obsolete(error: false)"
+            BP2="Obsolete(error: true)"
+            P1="Obsolete(error: false)"
+            P2="Obsolete(error: true)" />
+
+        <!--  Test Case 2  -->
+        <local:Class1>
+            <local:Class1.Style>
+                <Style TargetType="local:Class1">
+                    <Setter Property="BP1" Value="Obsolete(error: false)" />
+                    <Setter Property="BP2" Value="Obsolete(error: true)" />
+                </Style>
+            </local:Class1.Style>
+        </local:Class1>
+
+        <!--  Test Case 3  -->
+        <local:ObsoleteClass2/>
+
+        <!--  Test Case 4  -->
+        <local:ObsoleteClass3/>
+    </Grid>
+</ContentPage>
